@@ -1,0 +1,12 @@
+from enum import Enum
+
+class Screens(Enum):
+    SPLASHCREEN = 1
+    LOGINSCREEN = 2
+    NEWMEMSCREEN = 3
+    ACCTOPTSCREEN = 4
+    ACCTDETSCREEN = 5
+    TRANSFERSCREEN = 6
+    CHECKDEPSCREEN = 7
+    ADDACCTTYPESCREEN = 8
+    EXITSCREEN = 9
