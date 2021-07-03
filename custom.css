@@ -1,0 +1,25 @@
+* {{
+    font-family: SF Mono !important;/* <-- fonts */
+    text-transform: none;
+}}
+QPushButton{{
+    font-weight: normal;
+    text-transform: none;
+}}
+QLineEdit {{
+    border: 2px solid {QTMATERIAL_SECONDARYLIGHTCOLOR};
+    border-radius: 20%;
+    color: {QTMATERIAL_PRIMARYLIGHTCOLOR};
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: {QTMATERIAL_SECONDARYCOLOR};
+}}
+
+QLineEdit:hover {{
+    border: 2px solid {QTMATERIAL_PRIMARYLIGHTCOLOR};
+}}
+
+QLineEdit:focus {{
+    border: 2px solid {QTMATERIAL_PRIMARYLIGHTCOLOR};
+    background-color: {QTMATERIAL_SECONDARYLIGHTCOLOR};
+}}
