@@ -6,13 +6,13 @@ framework instead of Tkinter.
 This project is intended to mock the basic operations of a bank account owner at Codey Bank
 
 ## Table of Contents
-* [Current Features](#Current_Features)
-* [Resources](#Resources)
-* [Setup](#Local Setup)
-* [Extra Information](#Extra Information)
-* [Possible Future Developments](#Possible Future Development)
+* [Current Features](#current-features)
+* [Resources](#resources)
+* [Setup](#local-setup)
+* [Extra Information](#extra-information)
+* [Possible Future Developments](#possible-future-development)
 
-## Current_Features
+## Current Features
     * View Account Balance
     * Transfer
     * Check Deposit
