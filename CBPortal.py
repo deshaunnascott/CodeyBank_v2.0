@@ -9,8 +9,6 @@ This file contains the driver code for the CBPortal
 # Imports
 # =============================================================================
 import sys
-
-import AccountClass
 import config
 import Screens
 
