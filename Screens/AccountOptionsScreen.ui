@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>acctOptsScreen</class>
  <widget class="QMainWindow" name="acctOptsScreen">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -26,7 +29,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <widget class="QPushButton" name="acctDtlsButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -52,10 +61,13 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Acct. Details</string>
+     <string>Acct. Balance</string>
     </property>
    </widget>
    <widget class="QPushButton" name="transferButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -113,12 +125,12 @@ QPushButton:hover {
      <string>Check Deposit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="addAcctTypeButton">
+   <widget class="QPushButton" name="updateAcctButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>110</x>
       <y>290</y>
-      <width>211</width>
+      <width>281</width>
       <height>41</height>
      </rect>
     </property>
@@ -139,14 +151,17 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Add Acct. Type</string>
+     <string>Update Acct. Details</string>
     </property>
    </widget>
    <widget class="QLabel" name="acctOptionsText">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
+      <x>114</x>
+      <y>-5</y>
       <width>251</width>
       <height>71</height>
      </rect>
@@ -181,17 +196,65 @@ QPushButton:hover {
      <string>Member:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="acctOptsMemNameLabel">
+   <widget class="QLabel" name="acctOptsMemName">
     <property name="geometry">
      <rect>
       <x>70</x>
       <y>340</y>
-      <width>81</width>
+      <width>218</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Member Name</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logOutButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>340</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid gray;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+    border: 1px solid white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Log Out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteAcctButton">
+    <property name="geometry">
+     <rect>
+      <x>381</x>
+      <y>3</y>
+      <width>112</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 0px solid white;
+	color: &quot;red&quot;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete Acct</string>
     </property>
    </widget>
   </widget>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>splashScreen</class>
- <widget class="QMainWindow" name="splashScreen">
+ <class>splasScreen</class>
+ <widget class="QMainWindow" name="splasScreen">
   <property name="geometry">
    <rect>
     <x>0</x>

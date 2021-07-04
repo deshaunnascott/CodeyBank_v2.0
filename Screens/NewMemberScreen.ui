@@ -26,40 +26,46 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="newMemUsernameEdit">
+   <widget class="QLineEdit" name="newMemFNameEdit">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>100</y>
+      <x>180</x>
+      <y>120</y>
       <width>291</width>
       <height>41</height>
      </rect>
     </property>
     <property name="placeholderText">
-     <string>Username</string>
+     <string>First Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="newMemPassEdit">
+   <widget class="QLineEdit" name="newMemLNameEdit">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>180</y>
+      <x>180</x>
+      <y>200</y>
       <width>291</width>
       <height>41</height>
      </rect>
     </property>
     <property name="placeholderText">
-     <string>Password</string>
+     <string>Last Name</string>
     </property>
    </widget>
    <widget class="QLabel" name="newMemFNameLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>141</width>
+      <x>20</x>
+      <y>120</y>
+      <width>161</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Member First Name:</string>
@@ -68,11 +74,17 @@
    <widget class="QLabel" name="newMemLNameLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>180</y>
-      <width>141</width>
+      <x>20</x>
+      <y>200</y>
+      <width>151</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Member Last Name:</string>
@@ -81,8 +93,8 @@
    <widget class="QLineEdit" name="newAcctPinEdit">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>260</y>
+      <x>180</x>
+      <y>280</y>
       <width>291</width>
       <height>41</height>
      </rect>
@@ -97,11 +109,17 @@
    <widget class="QLabel" name="newAcctPinLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>260</y>
-      <width>141</width>
+      <x>20</x>
+      <y>280</y>
+      <width>151</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>MemberAcct. Pin:</string>
@@ -110,24 +128,36 @@
    <widget class="QLabel" name="newMemAcctNumLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>141</width>
+      <x>20</x>
+      <y>60</y>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>New Acct. #:</string>
+     <string>New Account Number:</string>
     </property>
    </widget>
    <widget class="QLabel" name="newMemAcctNum">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>40</y>
+      <x>280</x>
+      <y>58</y>
       <width>81</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -136,8 +166,8 @@
    <widget class="QPushButton" name="newMemJoinButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>320</y>
+      <x>390</x>
+      <y>340</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -165,8 +195,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="newMemCancelButton">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>320</y>
+      <x>270</x>
+      <y>340</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -189,6 +219,32 @@ QPushButton:hover {
     </property>
     <property name="text">
      <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="acctDetText">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-10</y>
+      <width>531</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>New Member Application</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TransferScreen</class>
- <widget class="QMainWindow" name="TransferScreen">
+ <class>addAccountScreen</class>
+ <widget class="QMainWindow" name="addAccountScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -26,11 +26,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="transferText">
+   <widget class="QLabel" name="acctTypeText">
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>0</y>
+      <y>-10</y>
       <width>531</width>
       <height>71</height>
      </rect>
@@ -46,7 +46,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Transfer Funds</string>
+     <string>Update Account Details</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -110,177 +110,208 @@ QPushButton:hover {
      <string>Submit</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="fromSavingsButton">
+   <widget class="QLabel" name="acctHolderNum">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>60</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>From Savings</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="fromCheckingButton">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>60</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>From Checking</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="dollarSignLabel">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>270</y>
-      <width>61</width>
+      <x>320</x>
+      <y>290</y>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>SF Mono</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
-      <bold>true</bold>
+      <bold>false</bold>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="text">
-     <string>$</string>
+     <string>12345</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="transferAmountEdit">
+   <widget class="QLabel" name="acctNumberLabel">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>280</y>
-      <width>211</width>
-      <height>41</height>
+      <x>240</x>
+      <y>260</y>
+      <width>201</width>
+      <height>61</height>
      </rect>
     </property>
-    <property name="placeholderText">
-     <string>Transfer Amount</string>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Account Number:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="transferAmountLabel">
+   <widget class="QLabel" name="acctHolderLabel">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>260</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Account Holder:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="acctHolderName">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>John Doe</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="newAcctPinLabel">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>220</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Change Acct. Pin:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="newMemLNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
       <width>291</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>SF Mono</family>
-      <pointsize>12</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string>Enter Amount to Transfer:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="recAcctNumLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>110</y>
-      <width>361</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>SF Mono</family>
-      <pointsize>12</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string>Enter Receiving Account Number:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="recAcctNumEdit">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>170</y>
-      <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="placeholderText">
-     <string>Receiving Acct Number</string>
+     <string>Last Name</string>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QLineEdit" name="newAcctPinEdit">
     <property name="geometry">
      <rect>
-      <x>61</x>
-      <y>155</y>
-      <width>130</width>
-      <height>80</height>
+      <x>180</x>
+      <y>220</y>
+      <width>291</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="placeholderText">
+     <string>Account Pin</string>
     </property>
-    <widget class="QRadioButton" name="transCheckingButton">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>8</y>
-       <width>112</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>To Checking</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="transSavingsButton">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>41</y>
-       <width>113</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>To Savings</string>
-     </property>
-    </widget>
+   </widget>
+   <widget class="QLabel" name="newMemLNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Change  Last Name:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="newMemFNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>First Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="newMemFNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Mono</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Change First Name:</string>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
