@@ -39,8 +39,8 @@ class LoginScreen(QtWidgets.QMainWindow):
         self.joinButton.clicked.connect(goToNewMemScreen)
 
     def verifyAcct(self):
-        acctNum = self.usernameEdit.text()
-        acctPin = self.passwordEdit.text()
+        acctNum = self.usernameEdit.text().strip()
+        acctPin = self.passwordEdit.text().srtip()
 
         if len(acctNum) == 0 or len(acctPin) == 0:
             # clear the line edit widget
@@ -84,10 +84,10 @@ class NewMemberScreen(QtWidgets.QMainWindow):
         self.newMemCancelButton.clicked.connect(goToLoginScreen)
 
     def addNewMember(self):
-        acctNum = self.newMemAcctNum.text()
-        pin = self.newAcctPinEdit.text()
-        fName = self.newMemFNameEdit.text()
-        lName = self.newMemLNameEdit.text()
+        acctNum = self.newMemAcctNum.text().strip()
+        pin = self.newAcctPinEdit.text().strip()
+        fName = self.newMemFNameEdit.text().strip()
+        lName = self.newMemLNameEdit.text().strip()
         config.ACCT = AccountClass.Account(acctNum, pin, fName, lName)
 
         config.DB.add_new_acct(config.DB.table, config.ACCT)
@@ -182,7 +182,7 @@ class CheckDepositScreen(QtWidgets.QMainWindow):
         self.submitButton.clicked.connect(self.updateBalance)
 
     def updateBalance(self):
-        Amt = self.checkAmountEdit.text()
+        Amt = self.checkAmountEdit.text().strip()
 
         if self.depositCheckingButton.isChecked():
             config.ACCT.mem_cbalance = config.ACCT.mem_cbalance+float(Amt)
