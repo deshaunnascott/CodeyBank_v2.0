@@ -172,8 +172,6 @@ class TransferScreen(QtWidgets.QMainWindow):
         else:
             showPopUp("Select a transfer account type!")
 
-
-
 class CheckDepositScreen(QtWidgets.QMainWindow):
     def __init__(self):
         super(CheckDepositScreen, self).__init__()
