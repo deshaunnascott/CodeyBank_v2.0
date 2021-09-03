@@ -40,7 +40,7 @@ class LoginScreen(QtWidgets.QMainWindow):
 
     def verifyAcct(self):
         acctNum = self.usernameEdit.text().strip()
-        acctPin = self.passwordEdit.text().srtip()
+        acctPin = self.passwordEdit.text().strip()
 
         if len(acctNum) == 0 or len(acctPin) == 0:
             # clear the line edit widget
