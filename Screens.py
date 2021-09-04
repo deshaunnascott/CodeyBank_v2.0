@@ -339,8 +339,9 @@ def goToUpdateAcctScreen():
 def goToExitScreen():
     config.GUI.setCurrentIndex(config.SCREENS.EXITSCREEN.value)
 
-    # clear current account global
-    config.ACCT = None
+    # clear current account and transfer account globals
+    config.ACCT  = None
+    config.TACCT = None
 
 def showPopUp(msg):
     popup = QMessageBox()
