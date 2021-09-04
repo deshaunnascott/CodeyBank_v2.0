@@ -13,11 +13,12 @@ from enum import Enum
 # =============================================================================
 # Global Variables
 # =============================================================================
-GUI   = None   # Variable for stacked widget as main gui container
-APP   = None   # Variable for application window
-DB    = None   # Variable for member database
-ACCT  = None   # Variable to hold information about current account
-TACCT = None   # Variable to hold information of specified transfer account
+GUI      = None   # Variable for stacked widget as main gui container
+APP      = None   # Variable for application window
+DB       = None   # Variable for member database
+ACCT     = None   # Variable to hold information about current account
+TACCT    = None   # Variable to hold information of specified transfer account
+ATTEMPTS = 0      # Variable to current users login attempts
 
 # =============================================================================
 # Enumerated Variables
