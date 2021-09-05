@@ -54,6 +54,20 @@ class LoginScreen(QtWidgets.QMainWindow):
             self.usernameEdit.clear()
             self.passwordEdit.clear()
 
+            showPopUp("Your username and password must both be numeric")
+
+            return
+
+        # check current users login attempts to make sure is within the limit
+        if config.ATTEMPTS == 4:
+            # clear the line edit widget
+            self.usernameEdit.clear()
+            self.passwordEdit.clear()
+
+            # Prompt user and go to exist screen
+            showPopUp("Too many failed logins! Your account has been locked!")
+            goToExitScreen()
+
             return
 
         # check for account in the database
@@ -70,11 +84,14 @@ class LoginScreen(QtWidgets.QMainWindow):
 
             goToAcctOptsScreen()
         else:
+            # increment current users login attempt
+            config.ATTEMPTS += 1
+
             # clear the line edit widget
             self.usernameEdit.clear()
             self.passwordEdit.clear()
 
-            showPopUp("Invalid Entry. Try Again.")
+            showPopUp("Member does not exist. Try Again or create a new account.")
 
 class NewMemberScreen(QtWidgets.QMainWindow):
     def __init__(self):
@@ -172,6 +189,8 @@ class TransferScreen(QtWidgets.QMainWindow):
         else:
             showPopUp("Select a transfer account type!")
 
+        goToAcctOptsScreen()
+
 class CheckDepositScreen(QtWidgets.QMainWindow):
     def __init__(self):
         super(CheckDepositScreen, self).__init__()
@@ -186,11 +205,13 @@ class CheckDepositScreen(QtWidgets.QMainWindow):
             config.ACCT.mem_cbalance = config.ACCT.mem_cbalance+float(Amt)
             acctType = 'checking_balance'
             config.DB.update_balance(config.DB.table, config.ACCT.acct_num, acctType, config.ACCT.mem_cbalance)
+            showPopUp("${amt:.2f} has been deposited into your Checking account".format(amt=float(Amt)))
 
         elif self.depositSavingsButton.isChecked():
             config.ACCT.mem_sbalance = config.ACCT.mem_sbalance+float(Amt)
             acctType = 'savings_balance'
             config.DB.update_balance(config.DB.table, config.ACCT.acct_num, acctType, config.ACCT.mem_sbalance)
+            showPopUp("${amt:.2f} has been deposited into your Savings account".format(amt=float(Amt)))
 
         else:
             showPopUp("Select an account type!")
@@ -253,6 +274,8 @@ class UpdateAccountScreen(QtWidgets.QMainWindow):
         self.acctHolderName.setText(memName)
         showPopUp("Account Update Successful")
 
+        goToAcctOptsScreen()
+
 class ExitScreen(QtWidgets.QMainWindow):
     def __init__(self):
         super(ExitScreen, self).__init__()
@@ -267,6 +290,9 @@ def goToSplashScreen():
 
 def goToLoginScreen():
     config.GUI.setCurrentIndex(config.SCREENS.LOGINSCREEN.value)
+
+    # Initialize login attempts
+    config.ATTEMPTS = 0
 
 def goToNewMemScreen():
     config.GUI.setCurrentIndex(config.SCREENS.NEWMEMSCREEN.value)
@@ -342,6 +368,9 @@ def goToExitScreen():
     # clear current account and transfer account globals
     config.ACCT  = None
     config.TACCT = None
+
+    # clear login attempts
+    config.ATTEMPTS = 0
 
 def showPopUp(msg):
     popup = QMessageBox()
